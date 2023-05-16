@@ -1,7 +1,67 @@
 <html>
 	<head>
+		<style>
+			body {
+				background-color: #1c1c1c;
+				color: white;
+				font-family: "Courier New";
+			}
+			
+			h1 {
+				text-align: center;
+			}
+			
+			.leftCanv {
+				margin-left: -10px;
+				margin-top: -75px;
+			}
+			
+			.rightCanv {
+				margin-left: 900px;
+				margin-top: -75px;
+			}
+		</style>
+		<script>
+			function MakeBG () {
+				const canvas = document.getElementById("SquareBG");
+				if (canvas.getContext) {
+				
+					let GarfieldOrange = "rgb(255, 134, 4)";
+					let ButtonOrange = "rgb(166, 52, 0)";
+					
+					const ctx = canvas.getContext("2d");
+					
+					ctx.fillStyle = GarfieldOrange;
+					
+					for (let i = 0; i < 8; i++) {
+						ctx.fillRect(0, 150 * i, 75, 75);
+					}
+					for (let i = 0; i < 8; i++) {
+						ctx.fillRect(75, 150 * i + 75, 75, 75);
+					}
+					
+					for (let i = 0; i < 8; i++) {
+						ctx.fillRect(1730, 150 * i + 75, 75, 75);
+					}
+					for (let i = 0; i < 8; i++) {
+						ctx.fillRect(1805, 150 * i, 75, 75);
+					}
+					
+					ctx.fillStyle = "rgb(166, 52, 0)";
+					
+					ctx.font = "44px Courier New";
+					
+					ctx.fillRect(175, 75, 350, 75);
+					ctx.fillStyle = "rgb(0, 0, 0)";
+					ctx.fillText("Shitty Beats", 175, 125);
+				}
+			}
+		</script>
 	</head>
-	<body>
-		<p>Test</p>
+	<body onload="MakeBG();">
+		<h1>Deaf's Place for Random Shit</h1>
+		<canvas id="SquareBG" width="1880" height="930" class="leftCanv" style="position:static;">
+		</canvas>
+		<p>asddddddddddddddddddddddd</p>
 	</body>
 </html>
