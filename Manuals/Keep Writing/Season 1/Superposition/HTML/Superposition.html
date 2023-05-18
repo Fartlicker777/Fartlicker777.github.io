@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Superposition — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        table {
+            margin: 1em auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Superposition</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Superposition.svg" class="diagram">
+                <h2>On the Subject of Superposition</h2>
+                <p class="flavour-text">Management told us to change our passwords every three months, but we took the superposition instead.</p>
+
+                <ul>
+                    <li>The 5x5 grid will have two letters displayed simultaneously, with the arrow buttons cycling between 5 grids. Each letter is a part of an unscrambled 5-letter word.</li>
+					<br>
+                    <li>Each grid can have 3 types of squares:
+						<ul>
+							<li>White squares - Neither letter has a pixel present in that spot.</li>
+							<li>Gray squares - Exactly one letter has a pixel present in that spot.</li>
+							<li>Black squares - Both letters have a pixel present in that spot.</li>
+						</ul>
+					</li>
+					<li><i>Editor's note: I couldn't decide between them being XORed or having them be ternary. If you could find a way to do both that isn't dumb, let me know.</i></li>
+					<br>
+					<li>Determine the two words present and consider both numbers they have next to them:
+						<ul>
+							<li>If the numbers share parity, press the submit button on the grid whose number correspond to the lower number.</li>
+							<li>If the numbers don't share parity, press the submit button on the grid whose number corresponds to the higher number.</li>
+						</ul>
+					</li>
+					<li><i>Editor's note 2: I had another way of submission where you'd submit the word back into the mod via RGB, where the two words present represent R and G, but I decided against it because I think it would be annoying to input, and RGB is quite overused at this point. I also thought of indexing the two numbers into a table, but decided against it because I like this method more than that one.</i></li>
+                </ul>
+				<table>
+					<tr>
+						<td>Argue</td>
+						<td>3</td>
+						<td>Blaze</td>
+						<td>1</td>
+						<td>Cajun</td>
+						<td>4</td>
+						<td>Depth</td>
+						<td>1</td>
+						<td>Endow</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>Foyer</td>
+						<td>4</td>
+						<td>Gimpy</td>
+						<td>2</td>
+						<td>Heavy</td>
+						<td>1</td>
+						<td>Index</td>
+						<td>5</td>
+						<td>Joker</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>Kylix</td>
+						<td>5</td>
+						<td>Lambs</td>
+						<td>3</td>
+						<td>Mercy</td>
+						<td>4</td>
+						<td>Nifty</td>
+						<td>2</td>
+						<td>Omens</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>Pupil</td>
+						<td>5</td>
+						<td>Risky</td>
+						<td>3</td>
+						<td>Stoic</td>
+						<td>4</td>
+						<td>Taboo</td>
+						<td>2</td>
+						<td>Unbox</td>
+						<td>4</td>
+					</tr>
+					
+					<tr>
+						<td>Viced</td>
+						<td>5</td>
+						<td>Waltz</td>
+						<td>3</td>
+						<td>Xerus</td>
+						<td>4</td>
+						<td>Yuzus</td>
+						<td>2</td>
+						<td>Zilch</td>
+						<td>4</td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Superposition</span>
+            </div>
+            <div class="page-content">
+				<h1 style="text-align:center;">Letter Reference</h1>
+				<img src="img/Component/Letters.png" style="height:auto;width:100%;">
+				<ul>
+				<li><i>Editor's note 3: I wanted to make each one a table you can highlight, but I hate CSS so I just made it in google sheets.</i></li>
+			</ul>
+            </div>
+            <div class="page-footer relative-footer">Page 2 of 2</div>
+        </div>
+    </div>
+</body>
+</html>

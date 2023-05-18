@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Telephone — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        table {
+            margin: 1em auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Telephone</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Telephone.svg" class="diagram">
+                <h2>On the Subject of Telephone</h2>
+                <p class="flavour-text">...goes around.</p>
+
+                <ul>
+                    <li>You are playing a game of Telephone with your past selves. Carry on the message sent by your old self and transmit it to your future self.</li>
+					<li>At some point during your bomb, you will hear a ringing from the phone. It will ring three times to alert you that a message has arrived.</li>
+					<li>Selecting the mod after this happens will show the current message on the display. To submit your answer, dial any number and the module will flip over to reveal a keyboard in which you can type your answer.</li>
+					<li>All Telephones will display a message when activated, and hide said message when deactivated.</li>
+					<li>Only one Telephone can be active at any given point.</li>
+					<li>Each Telephone, excluding the first-ever Telephone, will accept two answers:
+						<ul>
+							<li>The first answer is based on the previously encrypted message. This applies to previous bombs and deactivated Telephones.</li>
+							<li>The second answer is based on the currently displayed message, but requires more work.</li>
+							<li>The second answer is nullified if multiple Telephones are on the same bomb and at least one has been deactivated already.</li>
+						</ul>
+					</li>
+					<li>Submitting a message on a Telephone will neither solve nor strike the mod automatically if there are multiple Telephones on the bomb. Instead it will temporarily deactivate until all Telephones on the bomb have had a message inputted. Each Telephone that has incorrectly modified the previous message will strike. A Telephone instance will not strike if it correctly modified a previously incorrect message.</li>
+					<li>Refer to the next page for how to encrypt a message.</li>
+				</ul>
+				
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Telephone</span>
+            </div>
+            <div class="page-content">
+				<h2>If you are using a previously encrypted message:</h2>
+				<ul>
+					<li>You may use any one of the three modification LEDs to modify your message.</li>
+					<li>Submit your new modified message into the module for it to solve/deactivate.</li>
+					<li>This is the new encrypted message.</li>
+				</ul>
+				<h2>If no encrypted message exists yet:</h2>
+				<ul>
+					<li>You must use exactly two of the three modification LEDs.</li>
+					<li>Find all the LED colors in the table below and disregard the one farthest from the bottom. If there is a vowel, disregard the top most instead.</li>
+					<li>Apply the top transformation, then the bottom one and submit it into the module for it to solve/deactivate.</li>
+					<li>This is the new encrypted message.</li>
+				</ul>
+				<h2>If you aren't using a previously encrypted message:</h2>
+				<ul>
+					<li>You must use all three modification LEDs.</li>
+					<li>Apply the LED colors in the table below and apply them from the top to bottom, and submit it into the module for it to solve/deactivate.</li>
+					<li>This is the new encrypted message.</li>
+				</ul>
+				<table>
+					<tr>
+						<td>Red</td>
+						<td>Swap every adjacent pair of characters (includes spaces.)</td>
+					</tr>
+					<tr>
+						<td>Orange</td>
+						<td>Reverse the entire message.</td>
+					</tr>
+					<tr>
+						<td>Yellow</td>
+						<td>Replace every vowel with the letter that comes after it.</td>
+					</tr>
+					<tr>
+						<td>Green</td>
+						<td>Place all odd positioned characters in the front, then all evens in the back.</td>
+					</tr>
+					<tr>
+						<td>Blue</td>
+						<td>Move all prime positioned characters to the front.</td>
+					</tr>
+					<tr>
+						<td>Indigo</td>
+						<td>Rotate the message right.</td>
+					</tr>
+					<tr>
+						<td>Violet</td>
+						<td>Rotate the message left.</td>
+					</tr>
+				</table>
+				<p class="flavour-text">What comes around...</p>
+            </div>
+            <div class="page-footer relative-footer">Page 2 of 2</div>
+        </div>
+    </div>
+</body>
+</html>

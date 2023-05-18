@@ -1,0 +1,35 @@
+body {
+    background-color: #1c1c1c;
+    color: white;
+    font-family: "Courier New";
+}
+
+h1 {
+    text-align: center;
+}
+
+.Btn {
+    background-color: #A63400;
+    color: white;
+    border-radius: 5px;
+    font-size: 36px;
+}
+.page {
+    background-repeat: repeat-y;
+    background-position: left, right;
+    background-image: url("img/Garfunkle.svg"), url("img/Garfunkle2.svg");
+    background-size: 150px 150px;
+}
+/*
+.BtnRow { 
+    text-align:center;
+}
+*/
+table, th, td {
+    border: 1px solid #A63400;
+    background-color: black;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
