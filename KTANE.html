@@ -1,6 +1,128 @@
 <html>
 	<head>
+		<title>Terminally KTANE</title>
 		<link rel="stylesheet" href="Styles.css">
+		<link rel="icon" href="img/deaf.ico">
+
+		<script>
+			function Decipher(Decry) {
+				let input = (document.getElementById("InputCipher").value).toUpperCase();
+				let option = document.getElementById("cip").value;
+				let key = document.getElementById("CipherKey").value.toUpperCase();
+
+				let output = "";
+
+				let Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+				let ModernAlphabet = "QWERTYUIOPASDFGHJKLZXCVBNM";
+				switch (option) {
+					case "cae":
+						key = parseInt(key);
+						for (let i = 0; i < input.length; i++) {
+							if (!isLetter(input[i])) {
+					  			output += input[i];
+					 	 		continue;
+							}
+							let temp = Decry ? (Alphabet.indexOf(input[i]) - key) % 26 : (Alphabet.indexOf(input[i]) + key) % 26;
+
+							while (temp < 0) {
+								temp += 26;
+							}
+
+					  		output += Alphabet[temp];
+						}
+					break;
+					case "aff":
+						key = parseInt(key) * 2 + 1;
+						for (let i = 0; i < input.length; i++) {
+							if (!isLetter(input[i])) {
+					  			output += input[i];
+					  			continue;
+							}
+							let temp = 0;
+
+					  		while ((Alphabet.indexOf(input[i]) + 1 + (26 * temp)) % key != 0) {
+						 		temp++;
+							}
+							console.log((Alphabet.indexOf(input[i]) + 1 + (26 * temp)));
+							if (Decry) {
+								output += Alphabet[(Alphabet.indexOf(input[i]) + 1 + (26 * temp)) / key - 1];
+							}
+							else {
+								let temp2 = (Alphabet.indexOf(input[i]) + 1) * key % 26 - 1;
+								temp2 = temp2 == -1 ? 25 : temp2;
+								output += Alphabet[temp2];
+							}
+							temp = 0;
+					 	}
+					break;
+					case "atb":
+						for (let i = 0; i < input.length; i++) {
+							if (!isLetter(input[i])) {
+						  		output += input[i];
+					 	 		continue;
+							}
+						
+							temp = 25 - Alphabet.indexOf(input[i]);
+					  		output += Alphabet[temp];
+						}
+					break;
+					case "mod":
+						key = parseInt(key);
+						for (let i = 0; i < input.length; i++) {
+							if (!isLetter(input[i])) {
+					  			output += input[i];
+					  			continue;
+							}
+							let temp = Decry ? (ModernAlphabet.indexOf(input[i]) - key) % 26 : (ModernAlphabet.indexOf(input[i]) + key) % 26;
+
+							while (temp < 0) {
+								temp += 26;
+							}
+
+					  		output += ModernAlphabet[temp];
+					}
+					break;
+					case "pla":
+						let PlayKey = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
+
+						input = RemoveDuplicates(input).replaceAll(" ", "").replaceAll("J", "");
+
+						for (let i = 0; i < input.length; i++) {
+							if (!isLetter(input[i])) {
+					  			continue;
+							}
+
+							if (PlayKey.includes(input[i])) {
+								let index = PlayKey.indexOf(input[i]);
+								PlayKey = PlayKey.slice(0, index) + PlayKey.slice(index + 1, PlayKey.length);
+							}
+						}
+						PlayKey = input + PlayKey;
+						for (let i = 0; i < PlayKey.length; i++) {
+							output += PlayKey[i];
+							if (i % 5 == 4) {
+								output += "\n";
+							}
+						}
+					break;
+				}
+				document.getElementById("OutputCipher").value = output;
+			}
+
+			function RemoveDuplicates (str) {
+				let temp = "";
+				for (let i = 0; i < str.length; i++) {
+					if (!temp.includes(str[i])) {
+						temp += str[i];
+					}
+				}
+				return temp;
+			}
+
+			function isLetter(str) {
+				return str.length === 1 && str.match(/[a-z]/i);
+			}
+		</script>
 	</head>
 	<body class="page">
 		<h1>Deaf's Place for Being Terminally KTANE</h1>
@@ -10,13 +132,14 @@
 			<a href="https://www.youtube.com/playlist?list=PL6giE1a_sXZxLMIpgOvrprJqx26XipcEz" target="_blank"><button class="Btn">Shitty Beats</button></a>
 			<a href="KTANE.html"><button class="Btn">KTANE</button></a>
 		</div>
-		<h2 style="text-align:center;">Could I have made the menu a dropdown? Yes, I'm just lazy.</h2>
+		<h2 style="text-align:center;">Could I have made the menu a dropdown? Yes, I'm just moron.</h2>
 		<br>
 		<h3 style="text-align:center;">Deaf's Manual Hub</h3>
+		<h4 style="text-align:center;">If a manual I made is not on here, it's prolly shit.</h4>
 		<table style="width: 900px;">
 			<tr>
 				 <td>Name</td>
-				 <td>Keep Writing Prompt</td>
+				 <td>Potential Prompt</td>
 				 <td>Small Description</td>
 				 <td>Personal Rating</td>
 				 <td>Implementation</td>
@@ -73,7 +196,7 @@
 			<tr>
 				 <td>Gerrymandering</td>
 				 <td>Generation<br>(My 2nd season)</td>
-				 <td>A solo based on the politcal term of gerrymandering. My first Keep Writing season, prompt of Generation. This is a banger manual and I'm disappointed it did not win the round. It is the best manual I wrote in the season, and I have nothing else to say besides the mod is stuck in development hell by Blan/Emik. Also other manuals are going to go downhill from here.</td>
+				 <td>A solo based on the political term of gerrymandering. This is a banger manual and I'm disappointed it did not win the round. It is the best manual I wrote in the season, and I have nothing else to say besides the mod is stuck in development hell by Blan/Emik. Also other manuals are going to go downhill from here.</td>
 				 <td>11/10</td>
 				 <td>Claimed by Blan/Emik</td>
 				 <td><a href="Manuals/Keep Writing/Season 1/Gerrymandering/HTML/Gerrymandering.html" target="_blank"><button class="Btn">Read</button></a></td>
@@ -132,7 +255,7 @@
 				 <td>Simple manual, any description I put here would be longer than just reading the manual.</td>
 				 <td>6/10</td>
 				 <td>Not Claimed</td>
-				 <td><a href="Manuals/Runic Math/Runic Math.pdf" target="_blank"><button class="Btn">Read</button></a></td>
+				 <td><a href="Manuals/Electrical Boxes/Electrical Boxes.pdf" target="_blank"><button class="Btn">Read</button></a></td>
 			</tr>
 			<tr>
 				 <td>Reiteration</td>
@@ -150,6 +273,40 @@
 				 <td>Not Claimed</td>
 				 <td><a href="Manuals/Colorblind Support/Colorblind Support.pdf" target="_blank"><button class="Btn">Read</button></a></td>
 			</tr>
+			<tr>
+				<td>Solitaire Chess</td>
+				<td>King<br>Manual-cember 2021</td>
+				<td>It's a nice solo that is based on the name of the actual game/puzzle known as Solitaire (or Solo) Chess. I mixed rules from Chess.com's Solo Chess with Solitaire Chess, but should be fun regardless.</td>
+				<td>7/10</td>
+				<td>Not Claimed</td>
+				<td><a href="Manuals/Solitaire Chess/Solitaire Chess.pdf" target="_blank"><button class="Btn">Read</button></a></td>
+		   	</tr>
+			<tr>
+				<td>The Hatch</td>
+				<td>Swan<br>Manual-cember 2021</td>
+				<td>A maze where you find out what directions take you where and stumble your drunk ass to the Swan control room. It's prolly meh.</td>
+				<td>5/10</td>
+				<td>Not Claimed</td>
+				<td><a href="Manuals/The Hatch/The Hatch.pdf" target="_blank"><button class="Btn">Read</button></a></td>
+	   		</tr>
 		</table>
+		<br>
+		<div style="text-align:center;">
+		<h3 style="text-align:center;">Deaf's Tool Bucket</h3>
+		<input type="text" id="InputCipher" value="Type Here" style="font-size:32px;text-align:center;"><input type="text" id="CipherKey" value="Key" style="font-size:32px;text-align:center;"><input type="text" id="OutputCipher" value="Result" style="font-size:32px;text-align:center;">
+		<br>
+		<br>
+		<select name="Tool" id="cip" style="font-size:16px;">
+		 <option disabled selected value>Select Tool</option>
+		 <option value="cae">Caesar Cipher</option>
+		 <option value="aff">Affine Cipher</option>
+		 <option value="atb">Atbash Cipher</option>
+		 <option value="mod">Modern Cipher</option>
+		 <option value="pla">Playfair Cipher Grid</option>
+		</select>
+		<br>
+		<br>
+		<button type="button" onclick="Decipher(true)" class="Btn">Decrypt</button><button type="button" onclick="Decipher(false)" class="Btn" style="margin-left: 30px;">Encrypt</button>
+		</div>
 	</body>
 </html>
