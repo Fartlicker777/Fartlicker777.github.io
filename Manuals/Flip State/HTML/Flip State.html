@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Flip State — Keep Talking and Nobody Explodes Module</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        table {
+            margin: 1em auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Flip State</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Flip State.svg" class="diagram">
+                <h2>On the Subject of Flip State</h2>
+                <p class="flavour-text">"Oh I'm a top, I'm a bottom, I'm a switch."<br>You're twelve go do your Of Mice and Men reading assignment.</p>
+
+                <ul>
+                    <li>Take note of the state of each switch, and flip any switch to start the timer.</li>
+					<li>Use the table on the next page to determine which switch you should flip.</li>
+                    <li>For each flip, use the rule corresponding to the LED that lit up in reading order.</li>
+					<li>Consider the switches to wrap around, where going left from the leftmost switch would take you to the rightmost one and vice versa.</li>
+                    <li>Each flip after the first will have a maximum of 13 seconds for the next flip to occur. Failure to flip the correct switch in time will incur a strike, resetting the module.</li>
+                </ul>
+				<h2 style="margin-top:400px;text-align:center;">The blinding whitespace should kill all dark mode users by this point.</h2>
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 2</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Flip State</span>
+            </div>
+            <div class="page-content">
+                <table style="font-size:14px;">
+					<tr>
+						<td>Stage 1:
+							<ol>
+								<li>Flip the switch directly left of the one you flipped last.</li>
+								<li>Flip the switch directly right of the one you flipped last.</li>
+								<li>Flip the switch you flipped last.</li>
+								<li>Flip the third switch.</li>
+								<li>Flip the fifth switch.</li>
+							</ol>
+						</td>
+						<td>Stage 2:
+							<ol>
+								<li>Flip any switch that has not been flipped yet.</li>
+								<li>Flip either the second or the fourth switch.</li>
+								<li>Flip the switch you flipped to initiate the timer.</li>
+								<li>Flip any switch.</li>
+								<li>Flip the switch right of the switch whose LED was lit last stage.</li>
+							</ol>
+						</td>
+					</tr>
+					<tr>
+						<td>Stage 3:
+							<ol>
+								<li>Flip any switch that has had the most flips so far.</li>
+								<li>Flip any switch that has had the least flips so far.</li>
+								<li>Flip the switch you flipped on stage 1.</li>
+								<li>Flip any switch that has not been flipped yet.</li>
+								<li>Flip any switch that points up.</li>
+							</ol>
+						</td>
+						<td>Stage 4:
+							<ol>
+								<li>Flip any switch that did not point up during an odd stage.</li>
+								<li>Flip either switch that is adjacent to the switch you flipped in stage 2.</li>
+								<li>Flip the first switch.</li>
+								<li>Flip any switch whose LED has lit up the most.</li>
+								<li>Flip the switch right of the switch whose LED was lit in stage 1.</li>
+							</ol>
+						</td>
+					</tr>
+					<tr>
+						<td>Stage 5:
+							<ol>
+								<li>Flip any switch whose LED has not lit up prior to this stage.</li>
+								<li>Flip any switch that has been flipped exactly once.</li>
+								<li>Flip any switch in between the switch whose LED lit up in stage 1 and the switch flipped in stage 2.</li>
+								<li>Flip any switch that has never pointed down.</li>
+								<li>Flip any switch who direction is different from its neighbors.</li>
+							</ol>
+						</td>
+						<td>Stage 6:
+							<ol>
+								<li>Flip any switch that points the same direction of the current direction of the switch you flipped in stage 3.</li>
+								<li>Apply the stage 4 rule corresponding to the last flipped switch.</li>
+								<li>Flip either the switch that is left of the switch you flipped in stage 3 or the switch right of the one whose LED lit up stage 4.</li>
+								<li>Flip the switch that you flipped last.</li>
+								<li>Flip the switch right of the switch that is right of the switch you flipped in stage 1.</li>
+							</ol>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">Stage 7:
+							<ol>
+								<li>Flip the switch whose LED has lit up the most.</li>
+								<li>Flip the switch that has had the most flips.</li>
+								<li>Flip the switch that has never been flipped.</li>
+								<li>Flip the switch whose LED never lit up.</li>
+								<li>Flip the fifth switch.</li>
+							</ol>
+						</td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 2 of 2</div>
+        </div>
+    </div>
+</body>
+</html>
