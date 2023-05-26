@@ -16,6 +16,11 @@
 				let ModernAlphabet = "QWERTYUIOPASDFGHJKLZXCVBNM";
 				switch (option) {
 					case "cae":
+
+						if (isNaN(parseInt(key))) {
+							return;
+						}
+
 						key = parseInt(key);
 						for (let i = 0; i < input.length; i++) {
 							if (!isLetter(input[i])) {
@@ -32,6 +37,11 @@
 						}
 					break;
 					case "aff":
+						
+						if (isNaN(parseInt(key))) {
+							return;
+						}
+
 						key = parseInt(key) * 2 + 1;
 						for (let i = 0; i < input.length; i++) {
 							if (!isLetter(input[i])) {
@@ -67,6 +77,11 @@
 						}
 					break;
 					case "mod":
+
+						if (isNaN(parseInt(key))) {
+							return;
+						}
+
 						key = parseInt(key);
 						for (let i = 0; i < input.length; i++) {
 							if (!isLetter(input[i])) {
@@ -103,6 +118,74 @@
 							if (i % 5 == 4) {
 								output += "\n";
 							}
+						}
+					break;
+					case "bal":
+						let CarryOver = false;
+						if (Decry) {
+							for (let i = input.length - 1; i > -1; i--) {
+								if (CarryOver) {
+									if (input[i] == "0") {
+										output = "2" + output;
+									}
+									else if (input[i] == "+") {
+										CarryOver = false;
+										output = "0" + output;
+									}
+									else {
+										output = "1" + output;
+									}
+								}
+								else {
+									if (input[i] == "0") {
+										output = "0" + output;
+									}
+									else if (input[i] == "+") {
+										output = "1" + output;
+									}
+									else {
+										CarryOver = true;
+										output = "2" + output;
+									}
+								}
+							}
+						}
+						else {
+							for (let i = input.length - 1; i > -1; i--) {
+								if (CarryOver) {
+									if (input[i] == "0") {
+										output = "+" + output;
+										CarryOver = false;
+									}
+									else if (input[i] == "1") {
+										output = "-" + output;
+									}
+									else {
+										output = "0" + output;
+										if (i == 0) {
+											output = "+" + output;
+										}
+									}
+								}
+								else {
+									if (input[i] == "0") {
+										output = "0" + output;
+									}
+									else if (input[i] == "1") {
+										output = "+" + output;
+									}
+									else {
+										CarryOver = true;
+										output = "-" + output;
+									}
+								}
+							}
+							if (output[0] == "-") {
+								output = "+" + output;
+							}
+						}
+						while (output[0] == "0") {
+							output = output.slice(1);
 						}
 					break;
 				}
@@ -308,6 +391,7 @@
 		 <option disabled selected value>Select Tool</option>
 		 <option value="aff">Affine Cipher</option>
 		 <option value="atb">Atbash Cipher</option>
+		 <option value="bal">Balanced Ternary</option>
 		 <option value="cae">Caesar Cipher</option>
 		 <option value="mod">Modern Cipher</option>
 		 <option value="pla">Playfair Cipher Grid</option>
