@@ -14,6 +14,33 @@
 				background-color: transparent;
 				text-decoration: none;
 			}
+
+			.tooltip {
+  				position: relative;
+ 				display: inline-block;
+  				border-bottom: 1px dotted orange;
+			}
+
+			.tooltip .tooltiptext {
+  				visibility: hidden;
+  				width: 50px;
+  				background-color: black;
+  				color: #fff;
+  				text-align: center;
+  				border-radius: 6px;
+  				padding: 5px 0;
+				
+ 				/* Position the tooltip */
+  				position: absolute;
+  				z-index: 1;
+  				top: 100%;
+  				left: 50%;
+  				margin-left: -25px;
+			}
+
+			.tooltip:hover .tooltiptext {
+  				visibility: visible;
+			}
 		</style>
 	</head>
 	<body class="page">
@@ -34,16 +61,33 @@
 				 <td>Thoughts on Mode</td>
 				 <td>Personal Enjoyment</td>
 				 <td>Personal Difficulty</td>
-				 <td>MML Rating</td>
+				 <td>Current MML Rating*</td>
 				 <td>Date of Completion</td>
 			</tr>
+			<tr>
+				<td><a href="https://youtu.be/p7q1bnAzfMA">Aggressive Parasitic Pals</a></td>
+				<td><a href="https://gamejolt.com/games/PwP/669217">Playtime with Percy</a></td>
+				<td>This is my first true max mode, and it was a complete nightmare to do, though it didn't take me that long after doing normal parasitic pals. I foolishly said this and realized after a few attempts why it's so high on the list. Also the day I beat this is a lot of scores on the MML got reranked and 6 very hard max modes got added to the top, leading this one to go to #47 instead of #41. I guess at this point I shouldn't bother salivating over the numbers considering it would take a lot for them to go up the ranks instead of down.<br><br>Fun fact, I only did this because I tried one attempt of it directly after beating normal Parasitic Pals and I got to charge 2. If I didn't get that far, I probably would not have done this mode.</td>
+				<td>7/10</td>
+				<td>10/10</td>
+				<td>
+					<div class="tooltip">47
+						<span class="tooltiptext">(41)</span>
+					</div>
+				</td>
+				<td>Dec 13, 2024</td>
+	   	   	</tr>
 			<tr>
 				<td><a href="https://youtu.be/_IiltusXrkI">Parasitic Pals</a></td>
 				<td><a href="https://gamejolt.com/games/PwP/669217">Playtime with Percy</a></td>
 				<td>This mode fucks and everyone should do it. Best fangame I've played, SCP has lost that title.</td>
 				<td>10/10</td>
 				<td>9/10</td>
-				<td>84</td>
+				<td>
+					<div class="tooltip">91
+						<span class="tooltiptext">(84)</span>
+					</div>
+				</td>
 				<td>Dec 11, 2024</td>
 	   	   	</tr>
 			<tr>
@@ -52,7 +96,11 @@
 				<td>Despite the heavy RNG I had for doing the beginner strat, it was really fun to learn and pull off. I did have to do it twice because I forgot to record the first time, which was hella annoying. A lot of people say this is underrated on the MML and at this point idunno if it is. Honestly, if you know what you're doing, it's not <i>that</i> bad. You just have to learn the constituent parts first, and then piece them all together; piecing them together is where the difficulty lies. I'd say RNG was the cause of maybe 55% of my deaths, but that's mostly RNG within the first like 30 seconds so it doesn't matter lol.</td>
 				<td>8/10</td>
 				<td>9/10</td>
-				<td>92</td>
+				<td>
+					<div class="tooltip">80
+						<span class="tooltiptext">(92)</span>
+					</div>
+				</td>
 				<td>Dec 1, 2024</td>
 	   	   	</tr>
 			<tr>
@@ -61,7 +109,11 @@
 				<td>Also a fun max mode, and I think it's a bit underrated (or the others I've done are a bit overrated) on the MML, as most max modes take me around 2 hours to beat, this being no exception.</td>
 				<td>7/10</td>
 				<td>5/10</td>
-				<td>142</td>
+				<td>
+					<div class="tooltip">148
+						<span class="tooltiptext">(142)</span>
+					</div>
+				</td>
 				<td>Oct 30, 2024</td>
 		   	</tr>
 			<tr>
@@ -70,7 +122,11 @@
 				 <td>Really fun max mode, but tbh it's very easy and I'm surprised it made it onto the MML website, even with how low it is. It only took me an hour after installing to beat it.</td>
 				 <td>7/10</td>
 				 <td>2/10</td>
-				 <td>148</td>
+				 <td>
+					<div class="tooltip">N/A
+						<span class="tooltiptext">(148)</span>
+					</div>
+				</td>
 				 <td>Oct 3, 2024</td>
 			</tr>
 			<tr>
@@ -106,7 +162,11 @@
 				<td>I genuinely can't believe this is a real thing.</td>
 				<td>7/10</td> <!-- P.E. -->
 				<td>5/10</td> <!-- P.D. -->
-				<td>N/A (used to be on the list lol)</td>
+				<td>
+					<div class="tooltip">N/A
+						<span class="tooltiptext">(~145)</span>
+					</div>
+				</td>
 				<td>May 21, 2024</td>
 		   	</tr>
 			<tr>
@@ -115,7 +175,11 @@
 				<td>This is one of those rare fangames where it's of incredible quality and enjoyment, and is one of my favorite fangames I've ever played (also introduced me to Doors, so there's that). I originally laid eyes on it because I watched Hotel Hell's completion and I have some considerations on trying Hotel Hell itself, though it will definitely be a bitch to complete.</td>
 				<td>9/10</td> <!-- P.E. -->
 				<td>8/10</td> <!-- P.D. -->
-				<td>113</td>
+				<td>
+					<div class="tooltip">119
+						<span class="tooltiptext">(103)</span>
+					</div>
+				</td>
 				<td>May 16, 2024</td>
 		   	</tr>
 			<tr>
@@ -133,7 +197,11 @@
 				<td>This is my favorite fangame. Max mode itself isn't that difficult tbh.</td>
 				<td>10/10</td> <!-- P.E. -->
 				<td>6/10</td> <!-- P.D. -->
-				<td>120</td>
+				<td>
+					<div class="tooltip">126
+						<span class="tooltiptext">(110)</span>
+					</div>
+				</td>
 				<td>Dec 1, 2022</td>
 		   	</tr>
 			<tr>
@@ -142,10 +210,15 @@
 				<td>I talked about how things are underrated and overrated, this mode is VERY much underrated. The cylindrical surface that the cursor lies upon makes Bonnet so difficult, combined with flipping because of Yendo because muscle memory is a bitch, I think the mode needs to go up quite a bit. Really fun to do though since every run is winnable, and every loss is entirely your fault.</td>
 				<td>8/10</td> <!-- P.E. -->
 				<td>8/10</td> <!-- P.D. -->
-				<td>130</td>
+				<td>
+					<div class="tooltip">136
+						<span class="tooltiptext">(120)</span>
+					</div>
+				</td>
 				<td>Feb 24, 2022</td>
 		   	</tr>
 		</table>
+		<h4 style="text-align:center;">*Hovering over the MML score will show what rating it had when I first started attempts or what I first remember seeing it at.</h4>
 		<br>
 		<h4 style="text-align:center;">Next max modes I'm looking at are Hotel Hell (#23) and S.O.S. (#122).<br>The question is whether or not Orion will be defused before these, Orion was not defused before Playtime with Percy and 50/20.</h4>
 	</body>
